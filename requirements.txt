@@ -3,4 +3,4 @@ Werkzeug==2.2.5
 gunicorn==21.2.0
 gunicorn==21.2.0  # Production server (needed for many hosting platforms)
 Flask==2.2.5
-Werkzeug==2.2.5
+Werkzeug==2.2.3
