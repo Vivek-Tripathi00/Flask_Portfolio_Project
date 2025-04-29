@@ -1,0 +1,2944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Aiden - Frontend Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Custom Scrollbar for Webkit Browsers */
+::-webkit-scrollbar {
+    width: 12px;  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1b2533;  /* Background color of the scrollbar track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00aaff;  /* Scrollbar color */
+    border-radius: 10px;
+    border: 2px solid #1b2533;  /* Adds a border around the scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff4f81;  /* Hover color of the scrollbar */
+}
+
+/* Custom Scrollbar for Firefox */
+* {
+    scrollbar-width: thin;  /* Sets the scrollbar width */
+    scrollbar-color: #00aaff #1b2533;  /* Thumb color and track color */
+}
+
+/* Scrollbar Track (Optional) */
+.scrollbar-track {
+    background-color: #1b2533;
+    border-radius: 10px;
+}
+
+/* Scrollbar Thumb */
+.scrollbar-thumb {
+    background-color: #00aaff;
+    border-radius: 10px;
+    border: 2px solid #1b2533;
+}
+
+.scrollbar-thumb:hover {
+    background-color: #ff4f81;
+}
+
+/* Ensuring Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+    </style>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #0e1621;
+        color: #d1d1d1;
+    }
+
+    .bird {
+        position: fixed;
+        width: 150px; /* Adjust size based on your GIF */
+        animation: hover 3s ease-in-out infinite;
+        z-index: 10000;
+        left: 18%;
+        top: -30px;
+    }
+
+    @keyframes hover {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+</style>
+
+<body>
+  
+    <img src="rcLoy5Lpi.gif" alt="Hovering Bird" class="bird">
+    <header id="header">
+        
+        <div class="container">
+            <h1>Vivek</h1>
+         
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#timeline">Journey</a></li>
+                    <li><a href="#skills-section">Skills</a></li>
+                    <li><a href="#experience-section">Experience</a></li>
+                    <li><a href="#projects-section">Projects</a></li>
+                    <li><a href="#gallery-section">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <style>
+            /* Header Styles */
+            #header {
+                background-color: #152738;
+                color: white;
+                padding: 15px 20px;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                transition: background-color 0.3s, box-shadow 0.3s;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+    
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1200px;
+                margin: 0 auto;
+                position: relative;
+            }
+    
+            h1 {
+                font-size: 1.8em;
+                margin: 0;
+                font-weight: 700;
+                color: #f5f5f5;
+            }
+    
+            .menu-toggle {
+                display: none;
+                flex-direction: column;
+                cursor: pointer;
+                padding: 5px;
+                position: relative;
+                z-index: 1010;
+                margin-right: 30px /* Ensure it stays above the navbar */
+            }
+    
+            .menu-toggle .bar {
+                background-color: #f5f5f5;
+                height: 3px;
+                width: 25px;
+                margin: 3px 0;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+    
+            .menu-toggle.open .bar:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+    
+            .menu-toggle.open .bar:nth-child(2) {
+                opacity: 0;
+            }
+    
+            .menu-toggle.open .bar:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+    
+            nav {
+                display: flex;
+            }
+    
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                align-items: center;
+            }
+    
+            nav ul li {
+                margin: 0 15px;
+                position: relative;
+            }
+    
+            nav ul li a {
+                color: #f5f5f5;
+                text-decoration: none;
+                font-size: 1.1em;
+                transition: color 0.3s, transform 0.3s;
+            }
+    
+            nav ul li a:hover {
+                color: #00aaff;
+                transform: scale(1.1);
+            }
+    
+            nav ul li a::after {
+                content: '';
+                display: block;
+                height: 2px;
+                background-color: #00aaff;
+                transition: width 0.3s, opacity 0.3s;
+                width: 0;
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+            }
+    
+            nav ul li a.active::after {
+                width: 100%;
+                opacity: 1;
+            }
+    
+            /* Responsive Styles */
+            @media (max-width: 768px) {
+                .menu-toggle {
+                    display: flex;
+                }
+    
+                nav {
+                    position: fixed;
+                    top: 60px;
+                    right: 0;
+                    background-color: #152738;
+                    width: 250px;
+                    height: calc(100vh - 60px);
+                    transform: translateX(100%);
+                    transition: transform 0.3s ease-in-out;
+                    overflow-y: auto;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                }
+    
+                nav.open {
+                    transform: translateX(0);
+                }
+    
+                nav ul {
+                    flex-direction: column;
+                    width: 100%;
+                    padding: 20px;
+                }
+    
+                nav ul li {
+                    margin: 15px 0;
+                }
+    
+                nav ul li a {
+                    font-size: 1.2em;
+                    padding: 10px 20px;
+                }
+            }
+        </style>
+    
+        <script>
+            // JavaScript for menu toggle functionality
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                const navbar = document.getElementById('navbar');
+                const menuToggle = document.getElementById('menu-toggle');
+                navbar.classList.toggle('open');
+                menuToggle.classList.toggle('open');
+            });
+    
+            // Add a shadow effect when scrolling
+            window.onscroll = function() {
+                const header = document.getElementById('header');
+                if (window.scrollY > 50) {
+                    header.style.backgroundColor = '#101d29';
+                    header.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+                } else {
+                    header.style.backgroundColor = '#152738';
+                    header.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+                }
+            }
+    
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Add active class to the clicked link
+                    document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        </script>
+    </header>
+  
+    <section id="hero-section" class="hero-container">
+        <div class="hero-content">
+            <h1 id="hero-greeting" class="hero-greeting">Hi, I'm Vivek Tripathi</h1>
+            <h2 id="hero-title" class="hero-title">
+                <span id="typewriter" class="typewriter"></span>
+            </h2>
+            <p id="hero-description" class="hero-description">
+                Crafting innovative solutions as a passionate full-stack developer, merging creativity with code.
+            </p>
+            <button id="resume-button" class="resume-button" onclick="printResume()">My Resume</button>
+            <div id="social-media" class="social-media-header">
+                <a href="https://twitter.com/yourhandle" target="_blank" class="social-icon" id="twitter-icon">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon" id="linkedin-icon">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/yourprofile" target="_blank" class="social-icon" id="github-icon">
+                    <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub">
+                </a>
+            </div>
+        </div>
+       
+        <style>/* Import Google Fonts */
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+            
+            /* Hero Section */
+            .hero-container {
+                background-image: url('https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed; /* Parallax effect */
+                padding: 100px 20px; /* Adjust padding for smaller screens */
+                color: white;
+                text-align: left; /* Left-align text */
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                min-height: 600px;
+                position: relative;
+                overflow: hidden;
+                /* Smooth transition */
+                
+                
+            }
+            
+            .hero-content {
+                max-width: 70%;
+                padding-left: 20px; /* Adjust padding for smaller screens */
+                box-sizing: border-box; /* Include padding in width calculation */
+            }
+            
+            .hero-greeting {
+                font-size: 3em;
+                margin-bottom: 10px;
+                font-weight: 700;
+                font-family: 'Roboto', sans-serif;
+                animation: fadeIn 2s ease-in-out;
+            }
+            
+            .hero-title {
+                font-size: 4em;
+                margin-bottom: 20px;
+                font-weight: 700;
+                position: relative;
+                overflow: hidden; /* Ensure overflow is hidden */
+                white-space: nowrap; /* Ensure text does not wrap */
+                font-family: 'Roboto', sans-serif;
+                animation: fadeIn 2s ease-in-out 1s; /* Delay for title fade-in */
+            }
+            
+            .typewriter {
+                display: inline;
+                font-weight: bold;
+                color: #4db7fe;
+                border-right: 3px solid #3c4b97; /* Slightly thinner cursor effect */
+                animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+                white-space: nowrap; /* Ensure text does not wrap */
+            }
+            
+            @keyframes typing {
+                from { width: 0; }
+                to { width: 100%; }
+            }
+            
+            @keyframes blink {
+                from, to { border-color: transparent; }
+                50% { border-color: #f5f5f5; }
+            }
+            
+            .hero-description {
+                font-size: 1.4em;
+                margin-bottom: 30px;
+                font-family: 'Roboto', sans-serif;
+                animation: fadeIn 2s ease-in-out 2s; /* Delay for description fade-in */
+            }
+            
+            .resume-button {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 15px 30px;
+                font-size: 1.1em;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+                font-family: 'Roboto', sans-serif;
+            }
+            
+            .resume-button:hover {
+                background-color: #0056b3;
+                transform: scale(1.05);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            
+            .social-media-header {
+                margin-top: 20px;
+            }
+            
+            .social-icon {
+                display: inline-block;
+                margin: 0 10px;
+                transition: transform 0.3s, color 0.3s;
+            }
+            
+            .social-icon:hover {
+                transform: scale(1.1);
+            }
+            
+            .social-icon img {
+                width: 30px;
+                height: 30px;
+            }
+            
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            
+            /* Responsive Styles */
+            @media (max-width: 768px) {
+                .hero-container {
+                    padding: 80px 10px; /* Reduce padding on smaller screens */
+                    text-align: center; /* Center-align text on smaller screens */
+                }
+            
+                .hero-content {
+                    padding-left: 0; /* Remove left padding on smaller screens */
+                    text-align: center; /* Center-align text on smaller screens */
+                    max-width: 100%; /* Ensure content uses full width */
+                }
+            
+                .hero-greeting {
+                    font-size: 2.2em; /* Adjust font size for smaller screens */
+                }
+            
+                .hero-title {
+                    font-size: 2.5em; /* Adjust font size for smaller screens */
+                }
+            
+                .hero-description {
+                    font-size: 1.1em; /* Adjust font size for smaller screens */
+                }
+            }
+            
+            @media (max-width: 480px) {
+                .hero-greeting {
+                    font-size: 1.8em; /* Further reduce font size for very small screens */
+                }
+            
+                .hero-title {
+                    font-size: 1.5em; /* Further reduce font size for very small screens */
+                }
+            
+                .hero-description {
+                    font-size: 1em; /* Further reduce font size for very small screens */
+                }
+            
+                .social-icon img {
+                    width: 25px; /* Reduce icon size for very small screens */
+                    height: 25px;
+                }
+            }
+            </style>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const typewriterElement = document.getElementById('typewriter');
+                    const texts = ['Software Developer', 'Web Developer', 'App Developer'];
+                    let textIndex = 0;
+                    let charIndex = 0;
+                    let isDeleting = false;
+                    const typingSpeed = 100; // Speed of typing effect
+                    const deletingSpeed = 50; // Speed of deleting effect
+                
+                    function type() {
+                        const currentText = texts[textIndex];
+                        let displayedText = currentText.substring(0, charIndex);
+                
+                        if (isDeleting) {
+                            charIndex--;
+                        } else {
+                            charIndex++;
+                        }
+                
+                        typewriterElement.textContent = displayedText;
+                
+                        if (!isDeleting && charIndex === currentText.length) {
+                            isDeleting = true;
+                            setTimeout(type, 2000); // Pause at the end of each text
+                        } else if (isDeleting && charIndex === 0) {
+                            isDeleting = false;
+                            textIndex = (textIndex + 1) % texts.length;
+                            setTimeout(type, 500); // Pause before starting next text
+                        } else {
+                            setTimeout(type, isDeleting ? deletingSpeed : typingSpeed); // Speed of typing and deleting
+                        }
+                    }
+                
+                    type();
+                });
+                
+                function printResume() {
+                    // Replace with your resume URL or functionality to print the resume
+                    window.open('path-to-your-resume.pdf', '_blank');
+                }
+                
+            </script>
+    </section>
+    
+
+   
+
+
+
+
+
+    <div id="about-me" class="about-me-section">
+        <div class="about-me-content">
+            <div class="about-me-text">
+                <h1>About Me</h1>
+                <h2>Frontend Developer</h2>
+                <p>
+                    I'm Vivek Tripathi, a dedicated college student and aspiring developer with a passion for technology. As a full-stack, web, app, and software developer, I specialize in creating innovative solutions that combine creativity with advanced technology. Proficient in the MERN stack, I've developed dynamic web applications and intuitive mobile apps, always striving to enhance user experiences. My solid grasp of software engineering principles allows me to design scalable and robust software solutions. I'm committed to continuous learning and delivering impactful projects that make a difference.
+                </p>
+                <a href="#" class="read-more-btn">Read More</a>
+            </div>
+            <div class="about-me-image moving-border">
+                <img src="img.webp" alt="Profile Picture">
+            </div>
+        </div>
+        <div class="curly-shape1"></div>
+        <div class="curly-shape2"></div>
+     <style>
+      
+        /* Section Styling */
+.about-me-section {
+    position: relative;
+    background-color: #1a2433;
+    padding: 80px 20px;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Curly Shape Effect */
+.curly-shape1, .curly-shape2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgb(30, 82, 155);
+    border-radius: 50%;
+    transform: rotate(-30deg);
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.curly-shape1 {
+    top: -80px;
+    left: -150px;
+}
+
+.curly-shape2 {
+    bottom: -80px;
+    right: -150px;
+}
+
+/* Content Styling */
+.about-me-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    gap: 40px;
+}
+
+/* Text Styling */
+.about-me-text {
+    flex: 1;
+    max-width: 600px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.about-me-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #4db7fe;
+    animation: bounceIn 1s ease-out;
+}
+
+.about-me-text h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #e0f2f1;
+}
+
+.about-me-text p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #4db7fe;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #388fdc;
+    transform: translateY(-3px);
+}
+
+/* Image Styling with Animated Border */
+.about-me-image {
+    flex: 1;
+    max-width: 437px;
+    position: relative;
+}
+
+.about-me-image .moving-border img {
+    width: 70%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation Effects */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.about-me-image:hover{
+    scale: 1.03;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-me-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-me-text h1 {
+        font-size: 2.5em;
+    }
+
+    .about-me-text h2 {
+        font-size: 1.8em;
+    }
+
+    .about-me-text p {
+        font-size: 0.9em;
+    }
+    .about-me-image {
+        flex: 1;
+        max-width: 267px;
+        position: relative;
+    }
+    
+
+    .read-more-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .about-me-image img {
+        max-width: 100%;
+    
+    }
+}
+
+     </style>
+    </div>
+ 
+   
+
+    
+    <section id="timeline">
+        <div class="tl-item">
+            <div class="tl-bg" style="background-image: url(https://placeimg.com/801/801/nature)"></div>
+            <div class="tl-year">
+                <p class="f2 heading--sanSerif">10th Grade</p>
+            </div>
+            <div class="tl-content">
+                <h1>10th Grade Achievements</h1>
+                <p>Details about your achievements and milestones during 10th grade.</p>
+            </div>
+        </div>
+    
+        <div class="tl-item">
+            <div class="tl-bg" style="background-image: url(https://placeimg.com/802/802/nature)"></div>
+            <div class="tl-year">
+                <p class="f2 heading--sanSerif">12th Grade</p>
+            </div>
+            <div class="tl-content">
+                <h1>12th Grade Achievements</h1>
+                <p>Details about your achievements and milestones during 12th grade.</p>
+            </div>
+        </div>
+    
+        <div class="tl-item">
+            <div class="tl-bg" style="background-image: url(https://placeimg.com/803/803/nature)"></div>
+            <div class="tl-year">
+                <p class="f2 heading--sanSerif">College</p>
+            </div>
+            <div class="tl-content">
+                <h1>College Achievements</h1>
+                <p>Details about your achievements and milestones during college.</p>
+            </div>
+        </div>
+    
+        <style>
+            /* Basic Reset and Body Styling */
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+            
+            /* Timeline Container Styling */
+            #timeline {
+                display: flex;
+                background: url('https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg');
+                background-attachment: fixed; /* Fix background image */
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+                padding: 1em;
+                box-sizing: border-box;
+            }
+    
+            .tl-item {
+                position: relative;
+                flex: 1;
+                min-height: 400px; /* Default height for larger screens */
+                color: #fff;
+                overflow: hidden;
+                transition: width 0.5s ease;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0 1em; /* Margin to create space between items */
+            }
+    
+            .tl-bg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-size: cover;
+                background-position: center center;
+                transition: filter 0.5s ease;
+                filter: grayscale(100%);
+                z-index: -1;
+            }
+    
+            .tl-year {
+                position: relative;
+                text-align: center;
+                color: #fff;
+                margin-bottom: 1em;
+            }
+    
+            .tl-year p {
+                font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial, sans-serif;
+                font-size: 1.728rem;
+                margin: 0;
+            }
+    
+            .tl-content {
+                position: relative;
+                text-align: center;
+                max-width: 80%;
+                opacity: 0;
+                transform: translateY(25px);
+                transition: all 0.75s ease 0.5s;
+                color: #fff;
+            }
+    
+            .tl-content h1 {
+                font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial, sans-serif;
+                text-transform: uppercase;
+                color: #1779cf;
+                font-size: 1.44rem;
+                font-weight: normal;
+                margin: 0 0 0.5em 0;
+            }
+    
+            .tl-content p {
+                font-family: 'Pathway Gothic One', Helvetica Neue, Helvetica, Arial, sans-serif;
+                font-size: 1rem;
+                margin: 0;
+            }
+    
+            .tl-item:hover {
+                width: 100% !important;
+            }
+    
+            .tl-item:hover .tl-bg {
+                filter: grayscale(0);
+            }
+    
+            .tl-item:hover .tl-content {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            .tl-item:hover:before {
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%);
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            .tl-item:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 75%);
+                opacity: 0;
+                transform: translateY(50%);
+                transition: opacity 0.5s ease, transform 0.5s ease;
+            }
+    
+            .tl-item:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(3, 22, 37, 0.15);
+                opacity: 1;
+                transition: opacity 0.5s ease;
+            }
+    
+            /* Responsive Design */
+            @media (max-width: 1024px) {
+                #timeline {
+                    flex-direction: column;
+                }
+    
+                .tl-item {
+                    min-height: 300px; /* Reduced height for smaller screens */
+                    margin: 0.5em 0; /* Margin for vertical spacing */
+                }
+    
+                .tl-content {
+                    max-width: 95%; /* Adjust max-width for smaller screens */
+                }
+            }
+    
+            @media (max-width: 768px) {
+                .tl-item {
+                    min-height: 200px; /* Further reduced height for very small screens */
+                    margin: 0.5em 0; /* Adjust margin for smaller screens */
+                }
+            }
+        </style>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const items = document.querySelectorAll('.tl-item');
+    
+                items.forEach(item => {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0)';
+                            }
+                        });
+                    }, {
+                        threshold: 0.1
+                    });
+    
+                    observer.observe(item);
+                });
+            });
+    
+            // Optional: Add a JavaScript-based parallax effect
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY;
+                const parallaxElements = document.querySelectorAll('.tl-bg');
+    
+                parallaxElements.forEach(element => {
+                    element.style.backgroundPositionY = `${scrollPosition * 0.5}px`; // Adjust the multiplier to control the effect
+                });
+            });
+        </script>
+    </section>
+    
+    
+    
+      
+    
+    
+    <section id="skills-section">
+        <div class="skills-container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-content">
+                <!-- Coding Skills Section -->
+                <div class="coding-skills-container">
+                    <h3 class="skills-category-title">Coding Skills</h3>
+                  
+                    <div class="skill-item">
+                        <p class="skill-name">CSS</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-value="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <p class="skill-name">JavaScript</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-value="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <p class="skill-name">Python</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-value="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <p class="skill-name">React</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-value="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <p class="skill-name">node js</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-value="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <p class="skill-name">Software DEvopment</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-value="60"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <p class="skill-name">sql</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-value="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <p class="skill-name">Excel</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" data-value="70"></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Professional Skills Section -->
+                <div class="professional-skills-container">
+                    <h3 class="skills-category-title">Professional Skills</h3>
+                    <ul class="skills-list">
+                        <li class="skills-list-item">
+                            <span class="skill-label">Communication</span>
+                            <div class="circle-chart" data-percent="65"></div>
+                        </li>
+                        <li class="skills-list-item">
+                            <span class="skill-label">Teamwork</span>
+                            <div class="circle-chart" data-percent="85"></div>
+                        </li>
+                        <li class="skills-list-item">
+                            <span class="skill-label">Problem-Solving</span>
+                            <div class="circle-chart" data-percent="80"></div>
+                        </li>
+                        <li class="skills-list-item">
+                            <span class="skill-label">Time Management</span>
+                            <div class="circle-chart" data-percent="90"></div>
+                        </li>
+                        <li class="skills-list-item">
+                            <span class="skill-label">Creativity</span>
+                            <div class="circle-chart" data-percent="75"></div>
+                        </li>
+                        <li class="skills-list-item">
+                            <span class="skill-label">Prject Management</span>
+                            <div class="circle-chart" data-percent="75"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      <style>
+        /* Skills Section */
+#skills-section {
+    background-color: #101820;
+    padding: 0 0;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 40px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.section-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.coding-skills-container, .professional-skills-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.skills-category-title {
+    font-size: 24px;
+    color: #00aaff;
+    margin-bottom: 20px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.coding-skills-container .skills-category-title, .professional-skills-container .skills-category-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: #1b2533;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #00aaff, #0055ff);
+    width: 0;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: progressBarGradient 3s linear infinite;
+}
+
+/* Smooth Gradient Animation for Progress Bars */
+@keyframes progressBarGradient {
+    0% {
+        background: linear-gradient(90deg, #00aaff, #0055ff);
+    }
+    50% {
+        background: linear-gradient(90deg, #0055ff, #00aaff);
+    }
+    100% {
+        background: linear-gradient(90deg, #00aaff, #0055ff);
+    }
+}
+
+.professional-skills-container {
+    padding: 0;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.skills-list-item.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.skill-label {
+    flex: 1;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.circle-chart {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: conic-gradient(#00aaff 0%, #00aaff var(--percent), #1b2533 var(--percent), #1b2533 100%);
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.5s ease-in-out;
+    animation: circleGradientAnimation 5s linear infinite;
+}
+
+/* Smooth Gradient Animation for Circle Charts */
+@keyframes circleGradientAnimation {
+    0% {
+        background: conic-gradient(from 0deg, #00aaff, #0055ff);
+    }
+    50% {
+        background: conic-gradient(from 180deg, #0055ff, #00aaff);
+    }
+    100% {
+        background: conic-gradient(from 360deg, #00aaff, #0055ff);
+    }
+}
+
+.circle-chart::after {
+    content: attr(data-percent) '%';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.circle-chart:hover {
+    transform: scale(1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .skills-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coding-skills-container, .professional-skills-container {
+        min-width: 100%;
+    }
+}
+
+      </style>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Animation for section headers and list items
+                const sections = document.querySelectorAll(".section-title, .skills-category-title, .skills-list-item");
+        
+                window.addEventListener("scroll", () => {
+                    sections.forEach(section => {
+                        const sectionPos = section.getBoundingClientRect().top;
+                        if (sectionPos < window.innerHeight - 50) {
+                            section.classList.add("animate");
+                        }
+                    });
+                });
+        
+                // Animation for skill bars
+                const skillBars = document.querySelectorAll(".progress-bar");
+        
+                window.addEventListener("scroll", () => {
+                    skillBars.forEach(bar => {
+                        const value = bar.getAttribute("data-value");
+                        const barPos = bar.getBoundingClientRect().top;
+                        if (barPos < window.innerHeight - 50) {
+                            bar.style.width = value + "%";
+                        }
+                    });
+                });
+        
+                // Circle charts animation
+                const circleCharts = document.querySelectorAll(".circle-chart");
+        
+                window.addEventListener("scroll", () => {
+                    circleCharts.forEach(chart => {
+                        const percent = chart.getAttribute("data-percent");
+                        const chartPos = chart.getBoundingClientRect().top;
+                        if (chartPos < window.innerHeight - 50) {
+                            chart.style.setProperty('--percent', percent + '%');
+                        }
+                    });
+                });
+            });
+        </script>
+
+    </section>
+    <section id="new-badge-certificate-section" class="new-badge-certificate-section">
+        <h2 class="new-section-title">Badges & Certificates</h2>
+        <div class="parallax-background"></div>
+        <div class="new-badge-certificate-container">
+            <div class="new-badge">
+                <div class="glass-card">
+                    <img src="badge1.webp" alt="Badge 1">
+                    <p>Badge 1</p>
+                </div>
+            </div>
+            <div class="new-badge">
+                <div class="glass-card">
+                    <img src="badge1.webp" alt="Badge 2">
+                    <p>Badge 2</p>
+                </div>
+            </div>
+            <div class="new-badge">
+                <div class="glass-card">
+                    <img src="badge1.webp" alt="Badge 3">
+                    <p>Badge 3</p>
+                </div>
+            </div>
+            <div class="new-badge">
+                <div class="glass-card">
+                    <img src="badge1.webp" alt="Badge 4">
+                    <p>Badge 4</p>
+                </div>
+            </div>
+            <div class="new-badge">
+                <div class="glass-card">
+                    <img src="badge1.webp" alt="Badge 5">
+                    <p>Badge 5</p>
+                </div>
+            </div>
+            <!-- Add more badges as needed -->
+            <div class="new-certificate">
+                <div class="glass-card">
+                    <img src="cert1.webp" alt="Certificate 1">
+                    <p>Certificate 1</p>
+                </div>
+            </div>
+            <div class="new-certificate">
+                <div class="glass-card">
+                    <img src="cert1.webp" alt="Certificate 2">
+                    <p>Certificate 2</p>
+                </div>
+            </div>
+            <div class="new-certificate">
+                <div class="glass-card">
+                    <img src="cert1.webp" alt="Certificate 3">
+                    <p>Certificate 3</p>
+                </div>
+            </div>
+            <!-- Add more certificates as needed -->
+        </div>
+        <style>
+            /* Badge & Certificate Section */
+            .new-badge-certificate-section {
+                position: relative;
+                padding: 60px 20px;
+                background-color: #101820;
+                text-align: center;
+                overflow: hidden;
+                z-index: 1;
+              
+            }
+    
+            .parallax-background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('parallax-background.jpg') no-repeat center center/cover;
+                transform: translateZ(-1px) scale(1.5);
+                z-index: -1;
+            }
+    
+            .new-section-title {
+                font-size: 2.5em;
+                margin-bottom: 40px;
+                color: #ffffff;
+                opacity: 0;
+                transform: translateY(-20px);
+                transition: opacity 1s ease-out, transform 1s ease-out;
+            }
+    
+            .new-section-title.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            /* Container for Badges and Certificates */
+            .new-badge-certificate-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 30px;
+                padding: 10px 0;
+                justify-items: center;
+                overflow: hidden;
+            }
+    
+            .new-badge, .new-certificate {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .glass-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+                border-radius: 12px;
+                padding: 15px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+                transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+                width: 150px; /* Adjust size */
+                height: 150px; /* Adjust size */
+            }
+    
+            .glass-card img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 8px;
+                transition: transform 0.3s ease, filter 0.3s ease;
+                filter: grayscale(0%);
+            }
+    
+            .glass-card p {
+                color: #ffffff;
+                margin-top: 10px;
+                font-size: 0.9em;
+            }
+    
+            /* Hover Effect */
+            .glass-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+                background: rgba(255, 255, 255, 0.2);
+            }
+    
+            .glass-card img:hover {
+                transform: scale(1.05);
+                filter: grayscale(50%);
+            }
+    
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .new-badge-certificate-container {
+                    gap: 20px;
+                }
+    
+                .glass-card {
+                    width: 120px;
+                    height: 120px;
+                }
+    
+                .glass-card img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+    
+            @media (max-width: 480px) {
+                .new-badge-certificate-container {
+                    gap: 15px;
+                }
+    
+                .glass-card {
+                    width: 100px;
+                    height: 100px;
+                }
+    
+                .glass-card img {
+                    width: 60px;
+                    height: 60px;
+                }
+    
+                .glass-card p {
+                    font-size: 0.8em;
+                }
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const sectionTitle = document.querySelector(".new-section-title");
+                sectionTitle.classList.add("show");
+            });
+        </script>
+    </section>
+    
+
+    
+
+    <section id="experience-section">
+        <div class="experience-container">
+            <h2 class="section-title">My Experience</h2>
+            <div class="experience-content">
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <h3 class="experience-title">
+                            <i class="fas fa-laptop-code icon"></i> Software Developer Intern
+                        </h3>
+                        <p class="experience-company">XYZ Company</p>
+                        <p class="experience-duration">June 2023 - August 2023</p>
+                        <p class="experience-description">
+                            Worked on developing a full-stack web application using the MERN stack.
+                            Improved application performance by 20% and implemented new features.
+                        </p>
+                    </div>
+                    <div class="certificate">
+                        <img src="certificate1.webp" alt="Certificate 1">
+                    </div>
+                </div>
+            
+             
+            
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <h3 class="experience-title">
+                            <i class="fas fa-code icon"></i> Full Stack Developer Intern
+                        </h3>
+                        <p class="experience-company">WebJyoti Private Limited</p>
+                        <p class="experience-duration"> 10 june 2024 - 10 August 2024</p>
+                        <p class="experience-description">
+                            Contributed to the development of complex web applications using the MERN stack. 
+                            Enhanced the user experience by implementing responsive designs and optimized backend services to improve application speed by 25%.
+                        </p>
+                    </div>
+                    <div class="certificate">
+                        <img src="certificate2.webp" alt="Certificate 3">
+                    </div>
+                </div>
+            
+                <div class="experience-item">
+                    <div class="experience-details">
+                        <h3 class="experience-title">
+                            <i class="fas fa-paint-brush icon"></i> Website Developer Intern
+                        </h3>
+                        <p class="experience-company">College Fest Management</p>
+                        <p class="experience-duration">March 2023 - May 2023</p>
+                        <p class="experience-description">
+                            Designed and developed the official website for the college fest, ensuring seamless user experience 
+                            and managing real-time event updates. Successfully handled website traffic spikes during the fest 
+                            and collaborated with the event team to ensure accurate and timely information was displayed.
+                        </p>
+                    </div>
+                    <div class="certificate">
+                        <img src="certificate3.webp" alt="Certificate 4">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+        <style>
+            /* Experience Section */
+            #experience-section {
+                background-color: #101820;
+                padding: 60px 0;
+            }
+    
+            .experience-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+    
+            .section-title {
+                text-align: center;
+                color: #ffffff;
+                font-size: 36px;
+                margin-bottom: 40px;
+                position: relative;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            }
+    
+            .section-title.animate {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            .experience-content {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+    
+            .experience-item {
+                background-color: #1b2533;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease-in-out;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 20px;
+            }
+    
+            .experience-item:hover {
+                transform: translateY(-10px);
+            }
+    
+            .experience-details {
+                flex: 1;
+                color: #ffffff;
+            }
+    
+            .experience-title {
+                font-size: 24px;
+                color: #00aaff;
+                margin-bottom: 5px;
+                display: flex;
+                align-items: center;
+            }
+    
+            .experience-company {
+                font-size: 18px;
+                color: #00aaff;
+                margin-bottom: 5px;
+            }
+    
+            .experience-duration {
+                font-size: 16px;
+                color: #cccccc;
+                margin-bottom: 15px;
+            }
+    
+            .experience-description {
+                line-height: 1.6;
+            }
+    
+            .certificate {
+                margin-left: 20px;
+                flex-shrink: 0;
+            }
+    
+            .certificate img {
+                width: 150px;
+                height: auto;
+                border-radius: 10px;
+                transition: transform 0.3s ease-in-out;
+            }
+    
+            .certificate img:hover {
+                transform: scale(1.1);
+            }
+    
+            /* Icon */
+            .icon {
+                font-size: 20px;
+                margin-right: 10px;
+                color: #00aaff;
+            }
+    
+            /* Responsive Styles */
+            @media (max-width: 768px) {
+                .experience-item {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+    
+                .certificate {
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+    
+                .certificate img {
+                    width: 100%;
+                }
+            }
+        </style>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const sections = document.querySelectorAll(".section-title");
+    
+                window.addEventListener("scroll", () => {
+                    sections.forEach(section => {
+                        const sectionPos = section.getBoundingClientRect().top;
+                        if (sectionPos < window.innerHeight - 50) {
+                            section.classList.add("animate");
+                        }
+                    });
+                });
+            });
+        </script>
+    </section>
+    
+    <section id="unique-achievements-section">
+        <div class="unique-container">
+            <h2 class="unique-section-title">Awards & Achievements</h2>
+            <div class="unique-achievements-grid">
+                <div class="unique-achievement-item">
+                    <i class="fas fa-trophy unique-icon"></i>
+                    <h3>Top Performer Award</h3>
+                    <p>Received for outstanding performance during the Software Developer Internship at XYZ Company.</p>
+                </div>
+                <div class="unique-achievement-item">
+                    <i class="fas fa-certificate unique-icon"></i>
+                    <h3>Certified Full Stack Developer</h3>
+                    <p>Earned certification in MERN stack development from ABC Tech.</p>
+                </div>
+                <div class="unique-achievement-item">
+                    <i class="fas fa-award unique-icon"></i>
+                    <h3>Best Web Developer</h3>
+                    <p>Awarded for developing the college fest website and managing its operations successfully.</p>
+                </div>
+                <!-- Add more unique-achievement items as needed -->
+            </div>
+        </div>
+    </section>
+    
+    <section id="unique-why-choose-me-section">
+        <div class="unique-container">
+            <h2 class="unique-section-title">Why Choose Me</h2>
+            <div class="unique-reasons-grid">
+                <div class="unique-reason-item">
+                    <i class="fas fa-code unique-icon"></i>
+                    <h3>Expert in Full Stack Development</h3>
+                    <p>Proficient in creating scalable web applications using the latest technologies.</p>
+                </div>
+                <div class="unique-reason-item">
+                    <i class="fas fa-bolt unique-icon"></i>
+                    <h3>Efficient and Fast</h3>
+                    <p>Delivering high-performance applications with quick turnaround times.</p>
+                </div>
+                <div class="unique-reason-item">
+                    <i class="fas fa-users unique-icon"></i>
+                    <h3>Team Player</h3>
+                    <p>Experienced in working collaboratively with cross-functional teams.</p>
+                </div>
+                <!-- Add more unique-reason items as needed -->
+            </div>
+        </div>
+    <style>
+        /* General Section Styles */
+        .unique-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    
+        .unique-section-title {
+            text-align: center;
+            color: #ffffff;
+            font-size: 36px;
+            margin-bottom: 40px;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+    
+        .unique-section-title.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+        /* Achievements Section */
+        #unique-achievements-section {
+            background-color: #101820;
+            padding: 60px 0;
+        }
+    
+        .unique-achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+    
+        .unique-achievement-item {
+            background-color: #1b2533;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .unique-achievement-item:hover {
+            transform: translateY(-10px);
+        }
+    
+        .unique-achievement-item .unique-icon {
+            font-size: 48px;
+            color: #00aaff;
+            margin-bottom: 10px;
+        }
+    
+        .unique-achievement-item h3 {
+            font-size: 24px;
+            color: #00aaff;
+            margin-bottom: 10px;
+        }
+    
+        .unique-achievement-item p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+    
+        /* Why Choose Me Section */
+        #unique-why-choose-me-section {
+            background-color:#101820;
+            padding: 60px 0;
+        }
+    
+        .unique-reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+    
+        .unique-reason-item {
+            background-color: #1b2533;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .unique-reason-item:hover {
+            transform: translateY(-10px);
+        }
+    
+        .unique-reason-item .unique-icon {
+            font-size: 48px;
+            color: #00aaff;
+            margin-bottom: 10px;
+        }
+    
+        .unique-reason-item h3 {
+            font-size: 24px;
+            color: #00aaff;
+            margin-bottom: 10px;
+        }
+    
+        .unique-reason-item p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+    
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .unique-achievements-grid, .unique-reasons-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    </section>
+       
+    <section id="projects-section">
+        <div class="projects-container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large"></i> All
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <i class="fas fa-globe"></i> Web
+                </button>
+                <button class="filter-btn" data-filter="app">
+                    <i class="fas fa-mobile-alt"></i> App
+                </button>
+                <button class="filter-btn" data-filter="software">
+                    <i class="fas fa-laptop-code"></i> Software
+                </button>
+            </div>
+            <div class="projects-wrapper">
+                <button class="scroll-button left-arrow" aria-label="Scroll Left">&lt;</button>
+                <div class="projects-content">
+                    <!-- Repeatable Project Items -->
+                    <div class="project-item" data-category="web">
+                        <div class="project-image">
+                            <img src="img.webp" alt="Project 1">
+                            <div class="project-info-overlay">
+                                <h3 class="project-title">Web Project 1</h3>
+                                <p class="project-description">A web application that does X, Y, and Z...</p>
+                                <a href="#" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item" data-category="web">
+                        <div class="project-image">
+                            <img src="img.webp" alt="Project 1">
+                            <div class="project-info-overlay">
+                                <h3 class="project-title">Web Project 1</h3>
+                                <p class="project-description">A web application that does X, Y, and Z...</p>
+                                <a href="#" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item" data-category="web">
+                        <div class="project-image">
+                            <img src="img.webp" alt="Project 1">
+                            <div class="project-info-overlay">
+                                <h3 class="project-title">Web Project 1</h3>
+                                <p class="project-description">A web application that does X, Y, and Z...</p>
+                                <a href="#" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item" data-category="web">
+                        <div class="project-image">
+                            <img src="img.webp" alt="Project 1">
+                            <div class="project-info-overlay">
+                                <h3 class="project-title">Web Project 1</h3>
+                                <p class="project-description">A web application that does X, Y, and Z...</p>
+                                <a href="#" class="project-link">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More project items... -->
+                </div>
+                <button class="scroll-button right-arrow" aria-label="Scroll Right">&gt;</button>
+            </div>
+        </div>
+        <style>
+            /* Projects Section */
+            #projects-section {
+                background: url('https://images.pexels.com/photos/1477156/pexels-photo-1477156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center fixed;
+                background-size: cover;
+                padding: 60px 20px;
+                color: #ffffff;
+                font-family: Arial, sans-serif;
+                position: relative;
+                z-index: 1;
+            }
+    
+            .projects-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 10px;
+                text-align: center;
+            }
+    
+            .section-title {
+                font-size: 36px;
+                margin-bottom: 40px;
+                position: relative;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            }
+    
+            .section-title.animate {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            .filter-buttons {
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+    
+            .filter-btn {
+                background-color: #1b2533;
+                border: none;
+                color: #ffffff;
+                padding: 10px 15px;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: background-color 0.3s ease-in-out;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                font-size: 14px;
+            }
+    
+            .filter-btn i {
+                font-size: 18px;
+            }
+    
+            .filter-btn.active {
+                background-color: #00aaff;
+            }
+    
+            .filter-btn:hover {
+                background-color: #00aaff;
+            }
+    
+            .projects-wrapper {
+                display: flex;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+            }
+    
+            .projects-content {
+                display: flex;
+                gap: 20px;
+                overflow-x: auto;
+                scroll-behavior: smooth;
+                padding: 10px 0;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            }
+    
+            .project-item {
+                flex: 0 0 auto;
+                width: 300px;
+                background-color: #1b2533;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+                position: relative;
+                transition: transform 0.3s ease-in-out;
+                scroll-snap-align: center;
+            }
+    
+            .project-image {
+                position: relative;
+            }
+    
+            .project-image img {
+                width: 100%;
+                height: auto;
+                display: block;
+                transition: transform 0.3s ease-in-out;
+            }
+    
+            .project-image:hover img {
+                transform: scale(1.1);
+            }
+    
+            .project-info-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+                color: #ffffff;
+                opacity: 0;
+                transform: translateY(100%);
+                transition: all 0.3s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+            }
+    
+            .project-item:hover .project-info-overlay {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            .project-title {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+    
+            .project-description {
+                font-size: 16px;
+                margin-bottom: 15px;
+                line-height: 1.6;
+            }
+    
+            .project-link {
+                color: #00aaff;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease-in-out;
+            }
+    
+            .project-link:hover {
+                color: #ff4f81;
+            }
+    
+            .scroll-button {
+                background-color: #1b25336f;
+                border: none;
+                color: #ffffff;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 5px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+                z-index: 1;
+                opacity: 0.7;
+                font-size: 20px;
+            }
+    
+            .scroll-button:hover {
+                background-color: #00aaff;
+                opacity: 1;
+            }
+    
+            .left-arrow {
+                left: 10px;
+            }
+    
+            .right-arrow {
+                right: 10px;
+            }
+    
+            /* Hide scrollbar */
+            .projects-content::-webkit-scrollbar {
+                display: none;
+            }
+    
+            .projects-content {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+    
+            /* Responsive Styles */
+            @media (max-width: 768px) {
+                .project-item {
+                    width: 250px;
+                }
+    
+                .scroll-button {
+                    padding: 8px 15px;
+                    font-size: 18px;
+                }
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const sections = document.querySelectorAll(".section-title");
+                const filterButtons = document.querySelectorAll(".filter-btn");
+                const projectItems = document.querySelectorAll(".project-item");
+                const projectsContent = document.querySelector(".projects-content");
+                const leftArrow = document.querySelector(".left-arrow");
+                const rightArrow = document.querySelector(".right-arrow");
+    
+                window.addEventListener("scroll", () => {
+                    sections.forEach(section => {
+                        const sectionPos = section.getBoundingClientRect().top;
+                        if (sectionPos < window.innerHeight - 50) {
+                            section.classList.add("animate");
+                        }
+                    });
+                });
+    
+                filterButtons.forEach(button => {
+                    button.addEventListener("click", () => {
+                        const filter = button.getAttribute("data-filter");
+    
+                        // Remove active class from all buttons
+                        filterButtons.forEach(btn => btn.classList.remove("active"));
+                        button.classList.add("active");
+    
+                        // Filter projects
+                        projectItems.forEach(item => {
+                            item.style.display = filter === "all" || item.getAttribute("data-category") === filter ? "block" : "none";
+                        });
+    
+                        // Center filtered results
+                        centerFilteredItems();
+                    });
+                });
+    
+                // Center filtered items
+                function centerFilteredItems() {
+                    const visibleItems = Array.from(projectItems).filter(item => item.style.display === "block");
+                    const totalWidth = visibleItems.length * 300 + (visibleItems.length - 1) * 20; // 300px item width + 20px gap
+                    const contentWidth = projectsContent.offsetWidth;
+    
+                    if (totalWidth < contentWidth) {
+                        const padding = (contentWidth - totalWidth) / 2;
+                        projectsContent.style.justifyContent = "center";
+                        projectsContent.style.paddingLeft = `${padding}px`;
+                    } else {
+                        projectsContent.style.justifyContent = "flex-start";
+                        projectsContent.style.paddingLeft = `0`;
+                    }
+                }
+    
+                // Handle scroll buttons
+                function updateScrollButtons() {
+                    const scrollLeft = projectsContent.scrollLeft;
+                    const maxScrollLeft = projectsContent.scrollWidth - projectsContent.clientWidth;
+                    leftArrow.style.display = scrollLeft > 0 ? "block" : "none";
+                    rightArrow.style.display = scrollLeft < maxScrollLeft ? "block" : "none";
+                }
+    
+                leftArrow.addEventListener("click", () => {
+                    projectsContent.scrollTo({
+                        left: projectsContent.scrollLeft - 300,
+                        behavior: 'smooth'
+                    });
+                });
+    
+                rightArrow.addEventListener("click", () => {
+                    projectsContent.scrollTo({
+                        left: projectsContent.scrollLeft + 300,
+                        behavior: 'smooth'
+                    });
+                });
+    
+                projectsContent.addEventListener("scroll", updateScrollButtons);
+                updateScrollButtons(); // Initial call to set button visibility
+    
+                // Handle touch scrolling
+                let startX, scrollLeftStart;
+    
+                projectsContent.addEventListener("touchstart", (e) => {
+                    startX = e.touches[0].pageX;
+                    scrollLeftStart = projectsContent.scrollLeft;
+                });
+    
+                projectsContent.addEventListener("touchmove", (e) => {
+                    const distance = e.touches[0].pageX - startX;
+                    projectsContent.scrollLeft = scrollLeftStart - distance;
+                    updateScrollButtons();
+                });
+            });
+        </script>
+    </section>
+    
+        
+ 
+    
+
+
+    <section id="gallery-section">
+        <h2 class="section-title">Gallery</h2>
+     <div class="gallery-image">
+         
+       <div class="img-box">
+         <img src="https://picsum.photos/350/250?image=444" alt="Library" />
+         <div class="transparent-box">
+           <div class="caption">
+             <p>Library</p>
+             <p class="opacity-low">Architect Design</p>
+           </div>
+         </div>
+       </div>
+       <div class="img-box">
+         <img src="https://picsum.photos/350/250/?image=232" alt="Night Sky" />
+         <div class="transparent-box">
+           <div class="caption">
+             <p>Night Sky</p>
+             <p class="opacity-low">Cinematic</p>
+           </div>
+         </div>
+       </div>
+       <div class="img-box">
+         <img src="https://picsum.photos/350/250/?image=431" alt="Tea Talk" />
+         <div class="transparent-box">
+           <div class="caption">
+             <p>Tea Talk</p>
+             <p class="opacity-low">Composite</p>
+           </div>
+         </div>
+       </div>
+       <div class="img-box">
+         <img src="https://picsum.photos/350/250?image=474" alt="Road" />
+         <div class="transparent-box">
+           <div class="caption">
+             <p>Road</p>
+             <p class="opacity-low">Landscape</p>
+           </div>
+         </div>
+       </div>
+       <div class="img-box">
+         <img src="https://picsum.photos/350/250?image=344" alt="Sea" />
+         <div class="transparent-box">
+           <div class="caption">
+             <p>Sea</p>
+             <p class="opacity-low">Cityscape</p>
+           </div>
+         </div>
+       </div>
+       <div class="img-box">
+         <img src="https://picsum.photos/350/250?image=494" alt="Vintage" />
+         <div class="transparent-box">
+           <div class="caption">
+             <p>Vintage</p>
+             <p class="opacity-low">Cinematic</p>
+           </div>
+         </div>
+       </div>
+     </div>
+     
+     <style>
+     /* Resetting margins and padding */
+     
+     
+     /* Gallery container using CSS Grid */
+     .gallery-image {
+       display: grid;
+       grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+       gap: 10px;
+       padding: 20px;
+     }
+     
+     /* For desktop view: three columns */
+     @media (min-width: 768px) {
+       .gallery-image {
+         grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
+       }
+     }
+     
+     /* Image box containing each image */
+     .img-box {
+       position: relative;
+       overflow: hidden;
+       border-radius: 8px;
+       transition: transform 0.3s ease;
+       background-color: #f0f0f0;
+       height: 150px; /* Adjusted for proper fitting */
+     }
+     
+     /* Styling for the images */
+     .gallery-image img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       transition: transform 0.4s ease;
+       border-radius: 8px;
+     }
+     
+     /* Transparent overlay box */
+     .transparent-box {
+       position: absolute;
+       top: 0;
+       left: 0;
+       height: 100%;
+       width: 100%;
+       background-color: rgba(0, 0, 0, 0);
+       transition: background-color 0.3s ease;
+     }
+     
+     /* Caption text */
+     .caption {
+       position: absolute;
+       bottom: 10px;
+       left: 20px;
+       opacity: 0;
+       transition: transform 0.3s ease, opacity 0.3s ease;
+       color: white;
+     }
+     
+     /* Hover effect for images */
+     .img-box:hover img { 
+       transform: scale(1.1);
+     }
+     
+     /* Hover effect for transparent overlay */
+     .img-box:hover .transparent-box {
+       background-color: rgba(0, 0, 0, 0.5);
+     }
+     
+     /* Hover effect for caption text */
+     .img-box:hover .caption {
+       transform: translateY(-20px);
+       opacity: 1.0;
+     }
+     
+     /* Caption subtext */
+     .caption > p:nth-child(2) {
+       font-size: 0.8em;
+     }
+     
+     /* Low opacity for subtext */
+     .opacity-low {
+       opacity: 0.7;
+     }
+     </style>
+         </section>  
+    
+    <section id="counters" class="counters-section">
+        <div class="container">
+            <div class="counter-item">
+                <i class="fas fa-users"></i>
+                <h3>Total Visits</h3>
+                <span class="counter" data-target="150">0</span><span class="plus-symbol">+</span>
+            </div>
+            <div class="counter-item">
+                <i class="fas fa-clock"></i>
+                <h3>Hours of Experience</h3>
+                <span class="counter" data-target="180">0</span><span class="plus-symbol">+</span>
+            </div>
+            <div class="counter-item">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Projects</h3>
+                <span class="counter" data-target="15">0</span><span class="plus-symbol">+</span>
+            </div>
+        </div>
+        <style>
+       
+    
+            .counters-section {
+                padding: 10px 0;
+                background-color: #101820;;
+            }
+    
+            .container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                max-width: 100%;
+                margin: 0 auto;
+                padding: 0 10px;
+            }
+    
+            .counter-item {
+                text-align: center;
+                flex: 1;
+                margin: 0 5px;
+                position: relative;
+                overflow: hidden;
+            }
+    
+            .counter-item i {
+                font-size: 30px;
+                color: #4db7fe;
+                margin-bottom: 5px;
+            }
+    
+            .counter-item h3 {
+                font-size: 18px;
+                color: #4db7fe;
+                margin-bottom: 5px;
+            }
+    
+            .counter {
+                font-size: 32px;
+                color: #ffffff;
+                display: inline-block;
+                transition: all 0.5s ease-in-out;
+            }
+    
+            .plus-symbol {
+                font-size: 32px;
+                color: #ffffff;
+                display: inline-block;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+            }
+    
+            @media screen and (max-width: 1024px) {
+                .counter-item h3 {
+                    font-size: 16px;
+                }
+    
+                .counter-item i {
+                    font-size: 28px;
+                }
+    
+                .counter {
+                    font-size: 28px;
+                }
+    
+                .plus-symbol {
+                    font-size: 28px;
+                }
+            }
+    
+            @media screen and (max-width: 768px) {
+                .container {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    flex-wrap: nowrap;
+                }
+    
+                .counter-item {
+                    flex: 1 1 25%;
+                    margin: 0 3px;
+                }
+    
+                .counter-item h3 {
+                    font-size: 14px;
+                }
+    
+                .counter-item i {
+                    font-size: 24px;
+                }
+    
+                .counter {
+                    font-size: 24px;
+                }
+    
+                .plus-symbol {
+                    font-size: 24px;
+                }
+            }
+    
+            @media screen and (max-width: 480px) {
+                .container {
+                    padding: 0 5px;
+                }
+    
+                .counter-item {
+                    flex: 1 1 30%;
+                    margin: 0 2px;
+                }
+    
+                .counter-item h3 {
+                    font-size: 12px;
+                }
+    
+                .counter-item i {
+                    font-size: 20px;
+                }
+    
+                .counter {
+                    font-size: 20px;
+                }
+    
+                .plus-symbol {
+                    font-size: 20px;
+                }
+            }
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const counters = document.querySelectorAll('.counter');
+                const speed = 200;
+    
+                counters.forEach(counter => {
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+    
+                        const increment = target / speed;
+    
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            setTimeout(updateCount, 20);
+                        } else {
+                            counter.innerText = target;
+                            const plusSymbol = counter.nextElementSibling;
+                            plusSymbol.style.opacity = 1; // Fade in the "+" symbol
+                        }
+                    };
+    
+                    const observer = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                updateCount();
+                                observer.unobserve(counter);
+                            }
+                        });
+                    }, { threshold: 0.75 });
+    
+                    observer.observe(counter);
+                });
+            });
+        </script>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2 class="contact-title">Contact Me!</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name" class="visually-hidden">Name</label>
+                    <div class="input-icon">
+                        <i class="fas fa-user"></i>
+                        <input id="name" type="text" placeholder="Name" class="form-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="visually-hidden">Email</label>
+                    <div class="input-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input id="email" type="email" placeholder="Email" class="form-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="visually-hidden">Your Message</label>
+                    <div class="input-icon">
+                        <i class="fas fa-comment-alt"></i>
+                        <textarea id="message" placeholder="Your Message" class="form-textarea"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+        <style>
+            /* Contact Section */
+            #contact {
+                background-color: #101820;
+                padding: 20px 20px;
+                color: #fff;
+            }
+    
+            .contact-container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background: #1b2533;
+                border-radius: 10px;
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+                position: relative;
+                box-sizing: border-box;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+    
+            .contact-container:hover {
+                transform: translateY(-5px);
+                opacity: 0.95;
+            }
+    
+            .contact-title {
+                text-align: center;
+                font-size: 36px;
+                color: white;
+                margin-bottom: 40px;
+                position: relative;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            }
+    
+            .contact-title.animate {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+    
+            .form-group {
+                position: relative;
+            }
+    
+            .input-icon {
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+    
+            .input-icon i {
+                position: absolute;
+                left: 15px;
+                color: #00aaff;
+                font-size: 18px;
+                transition: transform 0.3s ease;
+            }
+    
+            .form-input, .form-textarea {
+                width: 100%;
+                padding: 15px 15px 15px 40px; /* Added padding for icons */
+                border: 2px solid #00aaff;
+                border-radius: 8px;
+                background: #2b3a4f;
+                color: #fff;
+                font-size: 16px;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+                box-sizing: border-box;
+            }
+    
+            .form-input:focus, .form-textarea:focus {
+                border-color: #00aaff;
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+            }
+    
+            .form-input:focus + i, .form-textarea:focus + i {
+                transform: scale(1.2);
+            }
+    
+            .form-textarea {
+                height: 150px;
+                resize: vertical;
+            }
+    
+            .btn {
+                background-color: #00aaff;
+                color: #fff;
+                padding: 15px;
+                border: none;
+                border-radius: 8px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+                box-sizing: border-box;
+            }
+    
+            .btn:hover {
+                background-color: #0091e0;
+                transform: translateY(-3px);
+                box-shadow: 0 6px 12px rgba(0, 145, 224, 0.3);
+            }
+    
+            .visually-hidden {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                padding: 0;
+                border: 0;
+                clip: rect(0, 0, 0, 0);
+                overflow: hidden;
+                white-space: nowrap;
+            }
+    
+            @media (max-width: 768px) {
+                .contact-container {
+                    padding: 20px;
+                    max-width: 100%;
+                }
+    
+                .contact-title {
+                    font-size: 28px;
+                    margin-bottom: 30px;
+                }
+    
+                .form-input, .form-textarea {
+                    font-size: 14px;
+                    padding: 12px 12px 12px 35px; /* Adjust padding for smaller screens */
+                }
+    
+                .btn {
+                    font-size: 16px;
+                    padding: 12px;
+                }
+            }
+    
+            @media (max-width: 480px) {
+                .contact-title {
+                    font-size: 24px;
+                    margin-bottom: 25px;
+                }
+    
+                .form-input, .form-textarea {
+                    font-size: 12px;
+                    padding: 10px 10px 10px 30px;
+                }
+    
+                .btn {
+                    font-size: 14px;
+                    padding: 10px;
+                }
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Animation for section title
+                const contactTitle = document.querySelector(".contact-title");
+    
+                window.addEventListener("scroll", () => {
+                    const titlePos = contactTitle.getBoundingClientRect().top;
+                    if (titlePos < window.innerHeight - 50) {
+                        contactTitle.classList.add("animate");
+                    }
+                });
+            });
+        </script>
+    </section>
+    
+        <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#journey">Journey</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Details</h3>
+                <p>Email: <a href="mailto:contact@jacobaiden.com">contact@jacobaiden.com</a></p>
+                <p>Phone: <a href="tel:+123456789">+123 456 789</a></p>
+            </div>
+            <div  class="footer-section">
+                <h3>Follow Me</h3>
+                <div class="social-media-footer">
+                    <a href="https://facebook.com/jacobaiden" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/jacobaiden" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/jacobaiden" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://instagram.com/jacobaiden" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+          <center>  <p>&copy; 2024 Jacob Aiden. All Rights Reserved.</p></center>
+        </div>
+        <style>
+            /* Footer Styles */
+#footer {
+    background-color: #152738;
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 16px;
+
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 24px;
+    color: #00aaff;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.footer-section p a{
+    text-decoration: none;
+    color: #00aaff;
+}
+
+
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #00aaff;
+}
+
+.social-media-footer {
+    display: flex;
+    gap: 15px;
+    justify-content:center;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #00aaff;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .social-media {
+        gap: 10px;
+    
+    }
+}
+
+        </style>
+    </footer> 
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Smooth scrolling for navigation
+            const links = document.querySelectorAll("nav ul li a");
+            for (const link of links) {
+                link.addEventListener("click", smoothScroll);
+            }
+        
+            function smoothScroll(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetSection = document.getElementById(targetId);
+        
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50,
+                    behavior: "smooth"
+                });
+            }
+        
+            // Animation for skill bars
+            const skillBars = document.querySelectorAll(".progress-bar");
+        
+            window.addEventListener("scroll", () => {
+                skillBars.forEach(bar => {
+                    const value = bar.getAttribute("data-value");
+                    bar.style.width = value + "%";
+                });
+            });
+        
+            // Animation on section headers
+            const sections = document.querySelectorAll("section h2");
+        
+            window.addEventListener("scroll", () => {
+                sections.forEach(section => {
+                    const sectionPos = section.getBoundingClientRect().top;
+                    if (sectionPos < window.innerHeight - 50) {
+                        section.classList.add("animate");
+                    }
+                });
+            });
+        });
+        
+    </script>
+    <style>
+        @property --angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+          }
+         
+        
+          .moving-border::before,
+          .moving-border::after {
+            content: "";
+            position: absolute;
+            inset: -0.2rem;
+            z-index: -1;
+            background: linear-gradient(var(--angle), 
+              #3382a1,  #0d66e1, #b00);
+            animation: rotate 10s linear infinite;
+          }
+          .moving-border::after {
+            filter: blur(10px);
+          }
+          @keyframes rotate {
+            0%     { --angle: 0deg; }
+            100%   { --angle: 360deg;
+            }
+          }
+    </style>
+</body>
+</html> 

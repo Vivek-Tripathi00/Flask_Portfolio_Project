@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #0e0f23;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .what-we-do {
+            padding: 60px 100px;
+            background: linear-gradient(135deg, #1c1f3f, #0f1123);
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2:after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background: #00ffda;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+        }
+
+        .section-header p {
+            margin: 20px 0;
+            font-size: 1.1em;
+            color: #aaa;
+            max-width: 500px;
+        }
+
+        .view-services {
+            display: inline-block;
+            padding: 10px 25px;
+            color: #00ffda;
+            border: 2px solid #00ffda;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .view-services:hover {
+            background-color: #00ffda;
+            color: #0e0f23;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            background-color: #1c1f3f;
+            border-radius: 8px;
+            padding: 30px;
+            width: 48%;
+            margin-bottom: 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-item .service-icon {
+            font-size: 2.5em;
+            color: #00ffda;
+            padding: 15px;
+            border: 2px solid #00ffda;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .service-content {
+            flex-grow: 1;
+        }
+
+        .service-item h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #00ffda;
+        }
+
+        .service-item p {
+            font-size: 0.95em;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+<section class="what-we-do">
+    <div class="section-header">
+        <h2>What We Do?</h2>
+        <p>If you hire a videographer or our team, you will get a video professional to make a custom video for your business, once the project is over.</p>
+        <a href="#" class="view-services">View All Services</a>
+    </div>
+    <div class="services-container">
+        <div class="service-item">
+            <div class="service-icon">
+                <i class="fas fa-film"></i>
+            </div>
+            <div class="service-content">
+                <h3>Motion Graphics</h3>
+                <p>Whether you’re halfway through the editing process, or you haven’t even started, our post-production services can put the finishing touches.</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+                <i class="fas fa-pen"></i>
+            </div>
+            <div class="service-content">
+                <h3>Scriptwriting & Editing</h3>
+                <p>Our post-production services can assist you at any stage of the process, ensuring high-quality content.</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+                <i class="fas fa-share-alt"></i>
+            </div>
+            <div class="service-content">
+                <h3>Video Distribution</h3>
+                <p>We help distribute your video content across multiple platforms, maximizing your reach and impact.</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+                <i class="fas fa-cloud"></i>
+            </div>
+            <div class="service-content">
+                <h3>Video Hosting</h3>
+                <p>Our video hosting solutions provide secure, scalable storage for all your video content.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
